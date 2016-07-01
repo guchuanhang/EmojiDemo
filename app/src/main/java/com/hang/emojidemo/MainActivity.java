@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnFocusChang
                         if (isShowing) {
                             mPlusIv.setImageResource(R.drawable.icon_icon);
                         } else {
-                            mPlusIv.setImageResource(R.drawable.keyboard);
+                            mPlusIv.setImageResource(R.drawable.keyboard_icon);
                         }
 
 

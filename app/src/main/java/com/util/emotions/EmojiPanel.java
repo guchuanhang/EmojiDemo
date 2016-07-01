@@ -47,7 +47,7 @@ public class EmojiPanel extends FrameLayout implements OnEmojiClickListener {
         totalLayout.addView(mViewPager);
 
         mPagerIndicator = new CirclePageIndicator(context);
-        mPagerIndicator.setBackgroundColor(Color.parseColor("#00ff00"));
+//        mPagerIndicator.setBackgroundColor(Color.parseColor("#00ff00"));
         mPagerIndicator.setGravity(Gravity.CENTER);
         mPagerIndicator.setPadding(padding, padding, padding, padding);
         totalLayout.addView(mPagerIndicator);

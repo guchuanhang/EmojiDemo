@@ -1,12 +1,13 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+//apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 24
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        applicationId "com.hang.emojidemo"
-        minSdkVersion 17
+//        applicationId "com.hang.emojidemo"
+        minSdkVersion 8
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"

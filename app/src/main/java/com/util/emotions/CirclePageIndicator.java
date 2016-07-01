@@ -22,8 +22,8 @@ public class CirclePageIndicator extends LinearLayout implements
     }
 
     private ViewPager mViewPager;
-    private int mNormalCircle = R.drawable.circle_normal;
-    private int mSelectCircle = R.drawable.circle_selected;
+    private int mNormalCircle = R.drawable.indicator_unchecked;
+    private int mSelectCircle = R.drawable.indicator_checked;
     private int mRealCount = 0;
     /**
      * 圆点间距
