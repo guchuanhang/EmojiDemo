@@ -5,4 +5,6 @@
 
 使用方法参考：MainActivity(注意其windowSoftInputMode=adjustSize)
 
-有关键盘&&表情切换的部分，挪用了https://github.com/Jacksgong/JKeyboardPanelSwitch成果，再次标注一下！
+有关键盘&&表情切换的部分，挪用了https://github.com/Jacksgong/JKeyboardPanelSwitch  成果，在此声明！
+
+希望大家多多指教
