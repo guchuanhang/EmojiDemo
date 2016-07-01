@@ -45,12 +45,12 @@ public class EmojiAdapter extends BaseAdapter {
 
             ImageView imageView = new ImageView(mContext);
 
-            imageView.setPadding(Util.dip2px(mContext, 8), Util.dip2px(mContext, 8), Util.dip2px(mContext, 8), Util.dip2px(mContext, 8));
+            imageView.setPadding(Util.dip2px(mContext, 12), Util.dip2px(mContext, 12), Util.dip2px(mContext, 12), Util.dip2px(mContext, 12));
             imageView.setScaleType(ImageView.ScaleType.FIT_XY);
             totalLayout.addView(imageView);
             LinearLayout.LayoutParams imageParams = (LinearLayout.LayoutParams) imageView.getLayoutParams();
-            imageParams.height = Util.dip2px(mContext, 48);
-            imageParams.width = Util.dip2px(mContext, 48);
+            imageParams.height = Util.dip2px(mContext, 56);
+            imageParams.width = Util.dip2px(mContext, 56);
 
             convertView = totalLayout;
             viewHolder.iconView = imageView;

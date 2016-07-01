@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v4.view.PagerAdapter;
+import android.text.Editable;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,15 +24,8 @@ public class EmojiPagerAdapter extends PagerAdapter {
     private EmojiUtil mEmojiUtils;
     private static final int EMOJIS_PER_PAGE = 21;
     private static final int EMOJIS_PER_LINE = 7;
-
-    /**
-     * 表情点击监听
-     */
     private OnEmojiClickListener mOnEmotionClickListener;
 
-    /**
-     * 表情点击监听
-     */
     public void setOnEmotionClickListener(OnEmojiClickListener l) {
         mOnEmotionClickListener = l;
     }
@@ -55,9 +49,9 @@ public class EmojiPagerAdapter extends PagerAdapter {
         GridView grid = new GridView(mContext);
         grid.setNumColumns(EMOJIS_PER_LINE);
         grid.setAdapter(adapter);
-        int padding = Util.dip2px(mContext, 8);
-        grid.setHorizontalSpacing(padding);
-        grid.setVerticalSpacing(padding);
+//        int padding = Util.dip2px(mContext, 8);
+//        grid.setHorizontalSpacing(padding);
+//        grid.setVerticalSpacing(padding);
         grid.setSelector(new ColorDrawable(Color.TRANSPARENT));
         grid.setCacheColorHint(Color.TRANSPARENT);
         grid.setStretchMode(GridView.STRETCH_COLUMN_WIDTH);
@@ -71,8 +65,11 @@ public class EmojiPagerAdapter extends PagerAdapter {
                     mOnEmotionClickListener.onEmotionClick(adapter
                             .getItem(position));
                 }
+
+
             }
         });
+
 
         // add to parent
         LayoutParams lp = new LayoutParams(LayoutParams.WRAP_CONTENT,
