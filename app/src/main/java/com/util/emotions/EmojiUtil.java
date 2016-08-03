@@ -78,29 +78,35 @@ public class EmojiUtil {
                 }
             }
         }
-        bmp.getHeight();
         return bmp;
     }
 
     /**
-     * 根据emoji名字（如：emj_001）
+     * 根据emoji名字（如：emji_001）
      */
     public SpannableString getSpannableByEmojiName(Context context,
                                                    String iconName) {
+        //将文件名组装成assets中对应的文件名(不包括扩展名)
         if (iconName.contains("[") && (iconName.contains("]"))) {
             iconName = iconName.substring(iconName.indexOf("[") + 1, iconName.indexOf("]"));
         }
+        if (!iconName.contains("_")) {
+            iconName = iconName.replace("e", "emoji_");
+        }
         Bitmap emojiBmp = getEmojiIcon(iconName);
-        SpannableString ss = new SpannableString("[" + iconName + "]");
+        if (emojiBmp == null) {
+            //这种情况为用户输入[你好]，符合正则表达式，但是，在里面找不到对应表情的问题；
+            return null;
+        }
+        //为了兼容旧有数据，这里将emoji_001修改为e001
+        String oldNameInString = iconName.replace("emoji_", "e");
+        SpannableString ss = new SpannableString("[" + oldNameInString + "]");
         Drawable d = new BitmapDrawable(context.getResources(), emojiBmp);
-        //TODO  48dp
-//        int emojiSize = (int) context.getResources().getDimension(
-//                dip2px(context, 48));
         int emojiSize =
                 Util.dip2px(context, 24);
         d.setBounds(0, 0, emojiSize, emojiSize);
         ImageSpan imgSpan = new ImageSpan(d);
-        ss.setSpan(imgSpan, 0, iconName.length() + 2,
+        ss.setSpan(imgSpan, 0, oldNameInString.length() + 2,
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         return ss;
     }
@@ -120,8 +126,11 @@ public class EmojiUtil {
             int start = m.start();
             String emojiName = m.group();
             // 用表情替换原名字
-            builder.replace(start, start + emojiName.length(),
-                    getSpannableByEmojiName(context, emojiName));
+            SpannableString spannableString = getSpannableByEmojiName(context, emojiName);
+            if (spannableString != null) {
+                builder.replace(start, start + emojiName.length(),
+                        spannableString);
+            }
         }
         return builder;
     }

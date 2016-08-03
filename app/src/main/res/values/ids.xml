@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <item name="fl_content" type="id"></item>
-    <item name="btn_emojis" type="id"></item>
-    <item name="et_input" type="id"></item>
-    <item name="viewPager" type="id"></item>
-    <item name="vp_indicator" type="id"></item>
-</resources>

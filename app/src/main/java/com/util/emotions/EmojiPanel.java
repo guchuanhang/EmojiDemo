@@ -115,6 +115,9 @@ public class EmojiPanel extends FrameLayout implements OnEmojiClickListener {
 			 */
             // 将SpannableString插入到光标处
             int index = mEditText.getSelectionStart();
+
+
+
             mEditText.getText().insert(
                     index,
                     mEmojiUtil

@@ -10,15 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="在下一页展示表情" />
-    <!-- 输入输 -->
-    <EditText
-        android:id="@+id/top_input"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:gravity="left|top"
-        android:hint="分享新鲜事..."
-        android:inputType="textMultiLine"
-        />
 
     <EditText
         android:id="@+id/et_input"
