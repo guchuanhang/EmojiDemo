@@ -18,5 +18,5 @@ please make sure its' windowSoftInputMode=adjustSize.
 In Main2Activity,it shows how to convert text to emtion.
 
 4.beside you need two icons:R.drawable.icon_icon for ready switch to emotion input,
-R.drawable.keyboard_icon for ready switch to ordinary text input.
+R.drawable.keyboard_icon for ready switch to ordinary text input. You can find that below drawable-xhdpi.
 
