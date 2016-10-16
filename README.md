@@ -2,7 +2,7 @@
 Social APP,always support emotion input such as QQ.
 Then in my recent development,studied this ,and save it.
 
-For it's effect play refer:https://github.com/guchuanhang/EmojiDemo/blob/master/ezgif.com-video-to-gif.gif
+For it's effect play refer:https://github.com/guchuanhang/EmojiDemo/blob/master/introduce.gif
 
 It's useage is simple:
 
